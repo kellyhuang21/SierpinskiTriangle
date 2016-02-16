@@ -1,8 +1,7 @@
 int serY =0;
 int serX = 10;
 int ser2Y =0;
-int rotate1 = 0;
-int size =0;
+int size1 =0;
 int c = 50;
 int y =0;
 boolean fuzzy = false;
@@ -16,17 +15,17 @@ public void draw()
   background(0);
 
   fill(247,214,161);
-  sierpinski(0 +serX,width/2+serY-c,width/3+size);
+  sierpinski(0 +serX,width/2+serY-c,width/3+size1);
   fill(103,250,35);
-  sierpinski(width/3 +serX ,width/2+serY-c,width/3+size);
+  sierpinski(width/3 +serX ,width/2+serY-c,width/3+size1);
   fill(250,235,142);
-  sierpinski(2*width/3+serX,width/2+serY-c,width/3+size);
+  sierpinski(2*width/3+serX,width/2+serY-c,width/3+size1);
   fill(255,167,25);
-  sierpinski2(10,width/2+ser2Y-c,width/3+size);
+  sierpinski2(10,width/2+ser2Y-c,width/3+size1);
   fill(197,247,173);
-  sierpinski2(10+width/3,width/2+ser2Y-c,width/3+size);
+  sierpinski2(10+width/3,width/2+ser2Y-c,width/3+size1);
   fill(250,194,25);
-  sierpinski2(10+2*width/3,width/2+ser2Y-c,width/3+size);
+  sierpinski2(10+2*width/3,width/2+ser2Y-c,width/3+size1);
   
   if(width/2+ser2Y-c>=200){
     ser2Y-=5;
@@ -38,19 +37,19 @@ void keyPressed() {
   if(keyCode == 38){
     fuzzy = true;
     ser2Y = 50;
-    size = 0;
+    size1 = 0;
   }
   if(keyCode == 40){
     fuzzy = false;
     ser2Y =50;
-    size =0;
+    size1 =0;
   }
 }
 public void mouseDragged()//optional
 {
-size++;
-if(size==305){
-  size = -100;
+size1++;
+if(size1==305){
+  size1 = -100;
 }
 }
 public void sierpinski(int x, int y, int len) 
